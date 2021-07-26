@@ -1,0 +1,43 @@
+
+
+<%- include("../partials/header") %>
+    <main class="d-flex align-items-center min-vh-100 py-3 py-md-0 mt-5">
+        <div class="container ">
+            <div class="card news-card">
+                <div class="row no-gutters">
+
+                    <div class="col-md-10 offset-md-1">
+                        <div class="card-body">
+                            
+                            <h3 style="text-align: center">Add MSP</h3>
+                            <div style="align-items: center;">
+                            <form action="/msp" method="POST">
+
+                                        <label for="name">product</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Name" value="" name="msp[product]" required>
+
+                                        <label for="msp">MSP (In Rupess)</label>
+                                        <input type="number" class="form-control" id="name" placeholder="msp" value="" name="msp[msp]" required>
+                                   
+                                        <label for="msp">Increament (In Rupess)</label>
+                                        <input type="number" class="form-control" id="name" value="" name="msp[increase]" required>
+
+                                        <div class="form-group">
+
+                                        
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button class="login-button">Add MSP </button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include("../partials/footer") %>

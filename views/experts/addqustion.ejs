@@ -1,0 +1,39 @@
+
+
+
+    <%- include("../partials/header") %>
+        <main class="d-flex align-items-center min-vh-100 py-3 py-md-0 mt-5">
+            <div class="container ">
+                <div class="card news-card">
+                    <div class="row no-gutters">
+    
+                        <div class="col-md-10 offset-md-1">
+                            <div class="card-body">
+                                <div class="brand-wrapper">
+    
+                                </div>
+                                <h3 style="text-align: center">Your Question</h3>
+                                <div style="align-items: center;">
+                                <form action="/experts/<%= expert._id %>/qustion" method="POST">
+    
+    
+                                        <div class="form-group">
+    
+                                            <textarea class="form-control" type="text" name="qustion[text]"
+                                               placeholder="Write your query here ..." rows="10"></textarea>
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <button class="login-button">Submit your Question </button>
+                                        </div>
+                                    </form>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    
+        <%- include("../partials/footer") %>

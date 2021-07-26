@@ -1,0 +1,48 @@
+<%- include("../partials/header") %>
+    <main class="d-flex align-items-center min-vh-100 py-3 py-md-0 mt-5">
+        <div class="container ">
+            <div class="card news-card">
+                <div class="row no-gutters">
+                    <div class="col-md-5">
+                        <img src="/images/upload.jpg" alt="login" class="login-card-img">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <div class="brand-wrapper">
+                              <h2>Edit Expert <%=expert.name%></h2>
+                            </div>
+
+                            <div style="align-items: center;">
+                                <form action="/experts/<%=expert._id%>?_method=PUT" method="POST" >
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" style="width:100%" class="form-control"
+                                        placeholder="Name" value="<%=expert.name%>" name="expert[name]" required>
+
+                                    <label for="name">Qualification</label>
+                                    <input type="text" style="width:100%" class="form-control" id=""
+                                        placeholder="Name" value="<%=expert.qualification%>" name="expert[qualification]" required>
+
+                                    
+
+                                    <div class="form-group">
+                                        <label for="description">Description</label>
+
+                                        <textarea id="desc" class="form-control" type="text" name="expert[desc]" value="<%=expert.desc%>"
+                                            rows="6" placeholder="Some details on your news" rows="10" required>
+                                                            <%=expert.desc%></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button class="login-button">Edit Expert</button>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include("../partials/footer") %>
